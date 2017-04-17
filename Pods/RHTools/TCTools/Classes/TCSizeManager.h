@@ -25,8 +25,8 @@
 #define ICON_SIZE(style) [TCSizeManager iconSizeWithStyle:style]
 #endif
 
-#ifndef TABBAR_HEIGHT
-#define TABBAR_HEIGHT [TCSizeManager tabBarHeight]
+#ifndef BUTTON_HEIGHT
+#define BUTTON_HEIGHT [TCSizeManager defaultButtonHeight]
 #endif
 
 #ifndef SIZE_CATEGORY
@@ -52,10 +52,12 @@ UIKIT_EXTERN NSString * const TCSizeCategoryExtraExtraExtraLarge;
  */
 UIKIT_EXTERN NSString * const TCFontTextStyle10;
 UIKIT_EXTERN NSString * const TCFontTextStyle12;
+UIKIT_EXTERN NSString * const TCFontTextStyle13;
 UIKIT_EXTERN NSString * const TCFontTextStyle14;
 UIKIT_EXTERN NSString * const TCFontTextStyle15;
 UIKIT_EXTERN NSString * const TCFontTextStyle16;
 UIKIT_EXTERN NSString * const TCFontTextStyle17;
+UIKIT_EXTERN NSString * const TCFontTextStyle18;
 
 
 /**
@@ -78,10 +80,12 @@ UIKIT_EXTERN NSString * const TCIconSizeStyle18;
 UIKIT_EXTERN NSString * const TCIconSizeStyle20;
 UIKIT_EXTERN NSString * const TCIconSizeStyle23;
 UIKIT_EXTERN NSString * const TCIconSizeStyle25;
+UIKIT_EXTERN NSString * const TCIconSizeStyle30;
 UIKIT_EXTERN NSString * const TCIconSizeStyle33;
 UIKIT_EXTERN NSString * const TCIconSizeStyle36;
 UIKIT_EXTERN NSString * const TCIconSizeStyle40;
 UIKIT_EXTERN NSString * const TCIconSizeStyle45;
+UIKIT_EXTERN NSString * const TCIconSizeStyle50;
 UIKIT_EXTERN NSString * const TCIconSizeStyle56;
 UIKIT_EXTERN NSString * const TCIconSizeStyle64;
 UIKIT_EXTERN NSString * const TCIconSizeStyle65;
@@ -135,11 +139,12 @@ UIKIT_EXTERN NSString * const TCIconSizeStyle66;
 + (CGSize)iconSizeWithStyle:(NSString *)iconSizeStyle;
 
 /**
- *  获取tabBar的高度
+ *  获取通用button的高度
  *
- *  @return tabBar高度
+ *  @return 通用button高度
  */
-+ (CGFloat)tabBarHeight;
+
++ (CGFloat)defaultButtonHeight;
 
 /**
  *  获取当前UI尺寸类型
@@ -154,5 +159,17 @@ UIKIT_EXTERN NSString * const TCIconSizeStyle66;
  *  @param sizeCategory UI尺寸
  */
 + (void)changeSizeCategory:(NSString *)sizeCategory;
+
+/**
+ *  不同尺寸的手机计算出来的size是不一样的
+ *
+ *  @return 倍率
+ */
++ (CGFloat)sizeRatio;
+
+/**
+ *  启用或禁用尺寸倍率
+ */
++ (void)autoSizeRatio:(BOOL)enable;
 
 @end

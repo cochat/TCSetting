@@ -28,10 +28,12 @@ NSString * const TCSizeCategoryExtraExtraExtraLarge = @"TCSizeCategoryExtraExtra
  */
 NSString * const TCFontTextStyle10 = @"TCFontTextStyle10";
 NSString * const TCFontTextStyle12 = @"TCFontTextStyle12";
+NSString * const TCFontTextStyle13 = @"TCFontTextStyle13";
 NSString * const TCFontTextStyle14 = @"TCFontTextStyle14";
 NSString * const TCFontTextStyle15 = @"TCFontTextStyle15";
 NSString * const TCFontTextStyle16 = @"TCFontTextStyle16";
 NSString * const TCFontTextStyle17 = @"TCFontTextStyle17";
+NSString * const TCFontTextStyle18 = @"TCFontTextStyle18";
 
 /**
  *  cell高度分类
@@ -53,14 +55,21 @@ NSString * const TCIconSizeStyle18 = @"TCIconSizeStyle18";
 NSString * const TCIconSizeStyle20 = @"TCIconSizeStyle20";
 NSString * const TCIconSizeStyle23 = @"TCIconSizeStyle23";
 NSString * const TCIconSizeStyle25 = @"TCIconSizeStyle25";
+NSString * const TCIconSizeStyle30 = @"TCIconSizeStyle30";
 NSString * const TCIconSizeStyle33 = @"TCIconSizeStyle33";
 NSString * const TCIconSizeStyle36 = @"TCIconSizeStyle36";
 NSString * const TCIconSizeStyle40 = @"TCIconSizeStyle40";
 NSString * const TCIconSizeStyle45 = @"TCIconSizeStyle45";
+NSString * const TCIconSizeStyle50 = @"TCIconSizeStyle50";
 NSString * const TCIconSizeStyle56 = @"TCIconSizeStyle56";
 NSString * const TCIconSizeStyle64 = @"TCIconSizeStyle64";
 NSString * const TCIconSizeStyle65 = @"TCIconSizeStyle65";
 NSString * const TCIconSizeStyle66 = @"TCIconSizeStyle66";
+
+/**
+ * 是否启用在大屏幕下放大size的功能，默认不启用
+ */
+static BOOL sizeRatio = NO;
 
 @implementation TCSizeManager
 
@@ -83,50 +92,62 @@ NSString * const TCIconSizeStyle66 = @"TCIconSizeStyle66";
                                      TCSizeCategorySmall: @{
                                              TCFontTextStyle10: @(9.375),
                                              TCFontTextStyle12: @(11.25),
+                                             TCFontTextStyle13: @(12.1875),
                                              TCFontTextStyle14: @(13.125),
                                              TCFontTextStyle15: @(14.0625),
                                              TCFontTextStyle16: @(15),
-                                             TCFontTextStyle17: @(15.9375)},
+                                             TCFontTextStyle17: @(15),
+                                             TCFontTextStyle18: @(16.875)},
                                      
                                      TCSizeCategoryMedium: @{
                                              TCFontTextStyle10: @(10),
                                              TCFontTextStyle12: @(12),
+                                             TCFontTextStyle13: @(13),
                                              TCFontTextStyle14: @(14),
                                              TCFontTextStyle15: @(15),
                                              TCFontTextStyle16: @(16),
-                                             TCFontTextStyle17: @(17)},
+                                             TCFontTextStyle17: @(16),
+                                             TCFontTextStyle18: @(18)},
                                      
                                      TCSizeCategoryLarge: @{
                                              TCFontTextStyle10: @(10.625),
                                              TCFontTextStyle12: @(12.75),
+                                             TCFontTextStyle13: @(13.8125),
                                              TCFontTextStyle14: @(14.875),
                                              TCFontTextStyle15: @(15.9375),
                                              TCFontTextStyle16: @(17),
-                                             TCFontTextStyle17: @(18.0625)},
+                                             TCFontTextStyle17: @(17),
+                                             TCFontTextStyle18: @(19.125)},
                                      
                                      TCSizeCategoryExtraLarge: @{
                                              TCFontTextStyle10: @(11.25),
                                              TCFontTextStyle12: @(13.5),
+                                             TCFontTextStyle13: @(14.625),
                                              TCFontTextStyle14: @(15.75),
                                              TCFontTextStyle15: @(16.875),
                                              TCFontTextStyle16: @(18),
-                                             TCFontTextStyle17: @(19.125)},
+                                             TCFontTextStyle17: @(18),
+                                             TCFontTextStyle18: @(20.25)},
                                      
                                      TCSizeCategoryExtraExtraLarge: @{
                                              TCFontTextStyle10: @(12.1875),
                                              TCFontTextStyle12: @(14.625),
+                                             TCFontTextStyle13: @(16.25),
                                              TCFontTextStyle14: @(17.0625),
                                              TCFontTextStyle15: @(18.28125),
                                              TCFontTextStyle16: @(19.5),
-                                             TCFontTextStyle17: @(20.71875)},
+                                             TCFontTextStyle17: @(20),
+                                             TCFontTextStyle18: @(26.5)},
                                      
                                      TCSizeCategoryExtraExtraExtraLarge: @{
                                              TCFontTextStyle10: @(12.1875),
                                              TCFontTextStyle12: @(14.625),
+                                             TCFontTextStyle13: @(16.25),
                                              TCFontTextStyle14: @(17.0625),
                                              TCFontTextStyle15: @(18.28125),
                                              TCFontTextStyle16: @(19.5),
-                                             TCFontTextStyle17: @(20.71875)}
+                                             TCFontTextStyle17: @(26),
+                                             TCFontTextStyle18: @(26.5)}
                                      };
         
     });
@@ -247,7 +268,7 @@ NSString * const TCIconSizeStyle66 = @"TCIconSizeStyle66";
     });
     
     CGFloat cellHeight = [cellHeightDictionary[sizeCategory][heightStyle] doubleValue];
-    return cellHeight;
+    return cellHeight + floor(([self sizeRatio] - 1) * cellHeight);
 }
 
 /**
@@ -269,10 +290,12 @@ NSString * const TCIconSizeStyle66 = @"TCIconSizeStyle66";
                                        TCIconSizeStyle20:@(19),
                                        TCIconSizeStyle23:@(22),
                                        TCIconSizeStyle25:@(23),
-                                       TCIconSizeStyle36:@(34),
+                                       TCIconSizeStyle30:@(29),
                                        TCIconSizeStyle33:@(32),
+                                       TCIconSizeStyle36:@(34),
                                        TCIconSizeStyle40:@(37.5),
                                        TCIconSizeStyle45:@(42.5),
+                                       TCIconSizeStyle50:@(47.5),
                                        TCIconSizeStyle56:@(52.5),
                                        TCIconSizeStyle64:@(60),
                                        TCIconSizeStyle65:@(60.5),
@@ -284,10 +307,12 @@ NSString * const TCIconSizeStyle66 = @"TCIconSizeStyle66";
                                        TCIconSizeStyle20:@(20),
                                        TCIconSizeStyle23:@(23),
                                        TCIconSizeStyle25:@(25),
+                                       TCIconSizeStyle30:@(30),
                                        TCIconSizeStyle33:@(33),
                                        TCIconSizeStyle36:@(36),
                                        TCIconSizeStyle40:@(40),
                                        TCIconSizeStyle45:@(45),
+                                       TCIconSizeStyle50:@(50),
                                        TCIconSizeStyle56:@(56),
                                        TCIconSizeStyle64:@(64),
                                        TCIconSizeStyle65:@(65),
@@ -299,10 +324,12 @@ NSString * const TCIconSizeStyle66 = @"TCIconSizeStyle66";
                                        TCIconSizeStyle20:@(21),
                                        TCIconSizeStyle23:@(24),
                                        TCIconSizeStyle25:@(27),
+                                       TCIconSizeStyle30:@(32),
                                        TCIconSizeStyle33:@(35),
                                        TCIconSizeStyle36:@(38.5),
                                        TCIconSizeStyle40:@(42.5),
                                        TCIconSizeStyle45:@(48),
+                                       TCIconSizeStyle50:@(53),
                                        TCIconSizeStyle56:@(59.5),
                                        TCIconSizeStyle64:@(68),
                                        TCIconSizeStyle65:@(69.5),
@@ -314,10 +341,12 @@ NSString * const TCIconSizeStyle66 = @"TCIconSizeStyle66";
                                        TCIconSizeStyle20:@(22),
                                        TCIconSizeStyle23:@(26),
                                        TCIconSizeStyle25:@(28),
+                                       TCIconSizeStyle30:@(34),
                                        TCIconSizeStyle33:@(37),
                                        TCIconSizeStyle36:@(40.5),
                                        TCIconSizeStyle40:@(45),
                                        TCIconSizeStyle45:@(51),
+                                       TCIconSizeStyle50:@(56),
                                        TCIconSizeStyle56:@(63),
                                        TCIconSizeStyle64:@(72),
                                        TCIconSizeStyle65:@(74),
@@ -329,10 +358,12 @@ NSString * const TCIconSizeStyle66 = @"TCIconSizeStyle66";
                                        TCIconSizeStyle20:@(25),
                                        TCIconSizeStyle23:@(28),
                                        TCIconSizeStyle25:@(30),
+                                       TCIconSizeStyle30:@(36),
                                        TCIconSizeStyle33:@(39),
                                        TCIconSizeStyle36:@(44),
                                        TCIconSizeStyle40:@(50),
                                        TCIconSizeStyle45:@(55),
+                                       TCIconSizeStyle50:@(60),
                                        TCIconSizeStyle56:@(68.5),
                                        TCIconSizeStyle64:@(78),
                                        TCIconSizeStyle65:@(81),
@@ -344,10 +375,12 @@ NSString * const TCIconSizeStyle66 = @"TCIconSizeStyle66";
                                        TCIconSizeStyle20:@(25),
                                        TCIconSizeStyle23:@(28),
                                        TCIconSizeStyle25:@(30),
+                                       TCIconSizeStyle30:@(36),
                                        TCIconSizeStyle33:@(39),
                                        TCIconSizeStyle36:@(44),
                                        TCIconSizeStyle40:@(50),
                                        TCIconSizeStyle45:@(55),
+                                       TCIconSizeStyle50:@(60),
                                        TCIconSizeStyle56:@(68.5),
                                        TCIconSizeStyle64:@(78),
                                        TCIconSizeStyle65:@(81),
@@ -356,33 +389,35 @@ NSString * const TCIconSizeStyle66 = @"TCIconSizeStyle66";
         
     });
     
-    CGFloat height = [iconSizeDictionary[sizeCategory][iconSizeStyle] doubleValue];
+    CGFloat height = [iconSizeDictionary[sizeCategory][iconSizeStyle] doubleValue] * [self sizeRatio];
     return CGSizeMake(height, height);
 }
 
 /**
- *  获取tabBar的高度
+ *  获取通用button的高度
  *
- *  @return tabBar高度
+ *  @return 通用button高度
  */
-+ (CGFloat)tabBarHeight {
+
++ (CGFloat)defaultButtonHeight {
     NSString *sizeCategory = [self sizeCategory];
     static dispatch_once_t onceToken;
-    static NSDictionary *tabBarHeightDictionary;
+    static NSDictionary *bottonHeightDictionary;
     dispatch_once(&onceToken, ^{
-        tabBarHeightDictionary = @{
-                                   TCSizeCategorySmall: @(46),
-                                   TCSizeCategoryMedium: @(49),
-                                   TCSizeCategoryLarge: @(52.5),
-                                   TCSizeCategoryExtraLarge: @(55.5),
-                                   TCSizeCategoryExtraExtraLarge: @(60),
-                                   TCSizeCategoryExtraExtraExtraLarge: @(60)};
+        bottonHeightDictionary = @{
+                                   TCSizeCategorySmall: @(44.5),
+                                   TCSizeCategoryMedium: @(47),
+                                   TCSizeCategoryLarge: @(50),
+                                   TCSizeCategoryExtraLarge: @(53),
+                                   TCSizeCategoryExtraExtraLarge: @(57.5),
+                                   TCSizeCategoryExtraExtraExtraLarge: @(57.5)};
         
     });
     
-    CGFloat tabBarHeight = [tabBarHeightDictionary[sizeCategory] doubleValue];
-    return tabBarHeight;
+    CGFloat buttonHeight = [bottonHeightDictionary[sizeCategory] doubleValue];
+    return buttonHeight * [self sizeRatio];
 }
+
 
 /**
  *  获取当前UI尺寸类型
@@ -406,6 +441,27 @@ NSString * const TCIconSizeStyle66 = @"TCIconSizeStyle66";
 + (void)changeSizeCategory:(NSString *)sizeCategory {
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     [userDefault setObject:sizeCategory forKey:TCSizeCategory];
+}
+
+/**
+ *  不同尺寸的手机计算出来的size是不一样的
+ *
+ *  @return 倍率
+ */
++ (CGFloat)sizeRatio {
+    if (sizeRatio) {
+        if ([UIScreen mainScreen].bounds.size.width > 320) {
+            return 1.05f;
+        }
+    }
+    return 1.0f;
+}
+
+/**
+ *  启用或禁用尺寸倍率
+ */
++ (void)autoSizeRatio:(BOOL)enable {
+    sizeRatio = enable;
 }
 
 @end

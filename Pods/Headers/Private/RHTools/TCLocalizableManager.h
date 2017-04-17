@@ -1,0 +1,1 @@
+../../../RHTools/TCTools/Classes/TCLocalizableManager.h
