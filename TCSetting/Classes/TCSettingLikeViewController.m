@@ -31,6 +31,7 @@ static const CGFloat kTableViewFooterHeight = 15.0f;    // tableview footeré«˜åº
     [super viewDidLoad];
     self.clearsSelectionOnViewWillAppear = NO;
     self.tableView.separatorColor = kTableViewSeparatorColor;
+    self.tableView.estimatedSectionFooterHeight = 0;
     [self tc_setup];
 }
 
