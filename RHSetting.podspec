@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RHSetting"
-  s.version      = "1.2.1.1"
+  s.version      = "1.2.1.2"
   
   s.summary      = "用于App的设置页面，简单、实用、美观"
   s.homepage     = "https://github.com/cochat/TCSetting"
@@ -11,5 +11,5 @@ Pod::Spec.new do |s|
   s.source_files  = "TCSetting/Classes/*.{h,m}"
   s.requires_arc = true
   s.dependency "Masonry", "~> 1.0.1"
-	s.dependency "RHTools", "~> 0.1.16.1"
+	s.dependency "TCTools", "~> 0.1.16.1"
 end
