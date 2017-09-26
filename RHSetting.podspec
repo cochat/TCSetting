@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RHSetting"
-  s.version      = "1.2.1.3"
+  s.version      = "1.2.1.4"
   
   s.summary      = "用于App的设置页面，简单、实用、美观"
   s.homepage     = "https://github.com/cochat/TCSetting"
