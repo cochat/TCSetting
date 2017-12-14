@@ -25,12 +25,12 @@
 		341335B71CCDE0E70027DF22 /* profileLockOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 341335B31CCDE0E60027DF22 /* profileLockOn@2x.png */; };
 		341335B81CCDE0E70027DF22 /* profileLockOn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 341335B41CCDE0E70027DF22 /* profileLockOn@3x.png */; };
 		3455D5141D5D9C5500C8BBCE /* UINavigationController+Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3455D5131D5D9C5500C8BBCE /* UINavigationController+Demo.m */; };
-		3457106B1D35CDC300D45E5C /* TCSettingLikeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3457106A1D35CDC300D45E5C /* TCSettingLikeViewController.m */; };
 		345B1BA71CD9E67F0089FF99 /* ViewController5.m in Sources */ = {isa = PBXBuildFile; fileRef = 345B1BA61CD9E67F0089FF99 /* ViewController5.m */; };
-		34A2DB811D0D6A0B0043CF34 /* TCSettingCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A2DB7C1D0D6A0B0043CF34 /* TCSettingCellModel.m */; };
-		34A2DB821D0D6A0B0043CF34 /* TCSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A2DB7E1D0D6A0B0043CF34 /* TCSettingTableViewCell.m */; };
-		34A2DB831D0D6A0B0043CF34 /* TCSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A2DB801D0D6A0B0043CF34 /* TCSettingViewController.m */; };
 		670385FEF9E02CEB8F8D6C7C /* libPods-TCSettingUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E401F74E33F8A296385B28A /* libPods-TCSettingUITests.a */; };
+		A7D5E3411FE24F920042A7CC /* TCSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D5E3391FE24F920042A7CC /* TCSettingViewController.m */; };
+		A7D5E3421FE24F920042A7CC /* TCSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D5E33A1FE24F920042A7CC /* TCSettingTableViewCell.m */; };
+		A7D5E3431FE24F920042A7CC /* TCSettingLikeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D5E33B1FE24F920042A7CC /* TCSettingLikeViewController.m */; };
+		A7D5E3441FE24F920042A7CC /* TCSettingCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D5E3401FE24F920042A7CC /* TCSettingCellModel.m */; };
 		D4F871F9A416704E547DB0B0 /* libPods-TCSetting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E08D3D95AB536F55BEA19B /* libPods-TCSetting.a */; };
 /* End PBXBuildFile section */
 
@@ -85,20 +85,20 @@
 		341335B41CCDE0E70027DF22 /* profileLockOn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profileLockOn@3x.png"; sourceTree = "<group>"; };
 		3455D5121D5D9C5500C8BBCE /* UINavigationController+Demo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Demo.h"; sourceTree = "<group>"; };
 		3455D5131D5D9C5500C8BBCE /* UINavigationController+Demo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Demo.m"; sourceTree = "<group>"; };
-		345710691D35CDC300D45E5C /* TCSettingLikeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSettingLikeViewController.h; sourceTree = "<group>"; };
-		3457106A1D35CDC300D45E5C /* TCSettingLikeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSettingLikeViewController.m; sourceTree = "<group>"; };
 		345B1BA51CD9E67F0089FF99 /* ViewController5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController5.h; sourceTree = "<group>"; };
 		345B1BA61CD9E67F0089FF99 /* ViewController5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController5.m; sourceTree = "<group>"; };
-		34A2DB7B1D0D6A0B0043CF34 /* TCSettingCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSettingCellModel.h; sourceTree = "<group>"; };
-		34A2DB7C1D0D6A0B0043CF34 /* TCSettingCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSettingCellModel.m; sourceTree = "<group>"; };
-		34A2DB7D1D0D6A0B0043CF34 /* TCSettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSettingTableViewCell.h; sourceTree = "<group>"; };
-		34A2DB7E1D0D6A0B0043CF34 /* TCSettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSettingTableViewCell.m; sourceTree = "<group>"; };
-		34A2DB7F1D0D6A0B0043CF34 /* TCSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSettingViewController.h; sourceTree = "<group>"; };
-		34A2DB801D0D6A0B0043CF34 /* TCSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSettingViewController.m; sourceTree = "<group>"; };
 		6DCF0E0812179AD3BDA59E87 /* Pods-TCSetting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSetting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCSetting/Pods-TCSetting.debug.xcconfig"; sourceTree = "<group>"; };
 		6E6917D88B474782C9AE7787 /* Pods-TCSettingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSettingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCSettingTests/Pods-TCSettingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		82E08D3D95AB536F55BEA19B /* libPods-TCSetting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TCSetting.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9555DB7A998B67D493167A48 /* Pods-TCSetting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSetting.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCSetting/Pods-TCSetting.release.xcconfig"; sourceTree = "<group>"; };
+		A7D5E3391FE24F920042A7CC /* TCSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSettingViewController.m; sourceTree = "<group>"; };
+		A7D5E33A1FE24F920042A7CC /* TCSettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSettingTableViewCell.m; sourceTree = "<group>"; };
+		A7D5E33B1FE24F920042A7CC /* TCSettingLikeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSettingLikeViewController.m; sourceTree = "<group>"; };
+		A7D5E33C1FE24F920042A7CC /* TCSettingCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSettingCellModel.h; sourceTree = "<group>"; };
+		A7D5E33D1FE24F920042A7CC /* TCSettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSettingTableViewCell.h; sourceTree = "<group>"; };
+		A7D5E33E1FE24F920042A7CC /* TCSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSettingViewController.h; sourceTree = "<group>"; };
+		A7D5E33F1FE24F920042A7CC /* TCSettingLikeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSettingLikeViewController.h; sourceTree = "<group>"; };
+		A7D5E3401FE24F920042A7CC /* TCSettingCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSettingCellModel.m; sourceTree = "<group>"; };
 		AC086CF26AEF609A1D9C45C3 /* libPods-TCSettingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TCSettingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5161AEF32379E54FA9653BF /* Pods-TCSettingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCSettingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCSettingUITests/Pods-TCSettingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,7 +156,7 @@
 		341335621CCDDDD70027DF22 /* TCSetting */ = {
 			isa = PBXGroup;
 			children = (
-				341335961CCDDE670027DF22 /* Classes */,
+				A7D5E3381FE24F920042A7CC /* TCSetting */,
 				341335971CCDDE670027DF22 /* Demo */,
 				341335661CCDDDD70027DF22 /* AppDelegate.h */,
 				341335671CCDDDD70027DF22 /* AppDelegate.m */,
@@ -199,21 +199,6 @@
 			path = TCSettingUITests;
 			sourceTree = "<group>";
 		};
-		341335961CCDDE670027DF22 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				34A2DB7B1D0D6A0B0043CF34 /* TCSettingCellModel.h */,
-				34A2DB7C1D0D6A0B0043CF34 /* TCSettingCellModel.m */,
-				34A2DB7D1D0D6A0B0043CF34 /* TCSettingTableViewCell.h */,
-				34A2DB7E1D0D6A0B0043CF34 /* TCSettingTableViewCell.m */,
-				34A2DB7F1D0D6A0B0043CF34 /* TCSettingViewController.h */,
-				34A2DB801D0D6A0B0043CF34 /* TCSettingViewController.m */,
-				345710691D35CDC300D45E5C /* TCSettingLikeViewController.h */,
-				3457106A1D35CDC300D45E5C /* TCSettingLikeViewController.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		341335971CCDDE670027DF22 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +231,21 @@
 				2CFAADA94AECBBB356D1AA77 /* Pods-TCSettingUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A7D5E3381FE24F920042A7CC /* TCSetting */ = {
+			isa = PBXGroup;
+			children = (
+				A7D5E3391FE24F920042A7CC /* TCSettingViewController.m */,
+				A7D5E33A1FE24F920042A7CC /* TCSettingTableViewCell.m */,
+				A7D5E33B1FE24F920042A7CC /* TCSettingLikeViewController.m */,
+				A7D5E33C1FE24F920042A7CC /* TCSettingCellModel.h */,
+				A7D5E33D1FE24F920042A7CC /* TCSettingTableViewCell.h */,
+				A7D5E33E1FE24F920042A7CC /* TCSettingViewController.h */,
+				A7D5E33F1FE24F920042A7CC /* TCSettingLikeViewController.h */,
+				A7D5E3401FE24F920042A7CC /* TCSettingCellModel.m */,
+			);
+			path = TCSetting;
 			sourceTree = "<group>";
 		};
 		F1F2EF4177A0EC5034A0A288 /* Frameworks */ = {
@@ -540,19 +540,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D5E3441FE24F920042A7CC /* TCSettingCellModel.m in Sources */,
 				341335AC1CCDDEDB0027DF22 /* ViewController.m in Sources */,
-				3457106B1D35CDC300D45E5C /* TCSettingLikeViewController.m in Sources */,
+				A7D5E3431FE24F920042A7CC /* TCSettingLikeViewController.m in Sources */,
 				3455D5141D5D9C5500C8BBCE /* UINavigationController+Demo.m in Sources */,
+				A7D5E3411FE24F920042A7CC /* TCSettingViewController.m in Sources */,
 				345B1BA71CD9E67F0089FF99 /* ViewController5.m in Sources */,
-				34A2DB811D0D6A0B0043CF34 /* TCSettingCellModel.m in Sources */,
 				341335AF1CCDDEDB0027DF22 /* ViewController3.m in Sources */,
 				341335AD1CCDDEDB0027DF22 /* ViewController1.m in Sources */,
 				341335B01CCDDEDB0027DF22 /* ViewController4.m in Sources */,
 				341335AE1CCDDEDB0027DF22 /* ViewController2.m in Sources */,
 				341335681CCDDDD70027DF22 /* AppDelegate.m in Sources */,
+				A7D5E3421FE24F920042A7CC /* TCSettingTableViewCell.m in Sources */,
 				341335651CCDDDD70027DF22 /* main.m in Sources */,
-				34A2DB831D0D6A0B0043CF34 /* TCSettingViewController.m in Sources */,
-				34A2DB821D0D6A0B0043CF34 /* TCSettingTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

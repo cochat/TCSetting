@@ -11,11 +11,11 @@
 /**
  *  tableview分隔线颜色
  */
-#ifndef kTableViewSeparatorColor
-#define kTableViewSeparatorColor [UIColor colorWithRed:225.0f / 255 green:225.0f / 255 blue:225.0f / 255 alpha:1]
+#ifndef ktcTableViewSeparatorColor
+#define ktcTableViewSeparatorColor [UIColor colorWithRed:225.0f / 255 green:225.0f / 255 blue:225.0f / 255 alpha:1]
 #endif
 
-static const CGFloat kTableViewFooterHeight = 15.0f;    // tableview footer高度
+static const CGFloat ktcTableViewFooterHeight = 15.0f;    // tableview footer高度
 
 @interface TCSettingLikeViewController ()
 
@@ -30,9 +30,9 @@ static const CGFloat kTableViewFooterHeight = 15.0f;    // tableview footer高�
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.clearsSelectionOnViewWillAppear = NO;
-    self.tableView.separatorColor = kTableViewSeparatorColor;
+    self.tableView.separatorColor = ktcTableViewSeparatorColor;
     self.tableView.estimatedSectionFooterHeight = 0;
-    self.tableView.estimatedSectionHeaderHeight = kFirstSectionHeaderHeight;
+    self.tableView.estimatedSectionHeaderHeight = ktcFirstSectionHeaderHeight;
     [self tc_setup];
 }
 
@@ -48,20 +48,20 @@ static const CGFloat kTableViewFooterHeight = 15.0f;    // tableview footer高�
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (section == 0) {
-        return kFirstSectionHeaderHeight;
+        return ktcFirstSectionHeaderHeight;
     }
-    return kOtherSectionHeaderHeight;
+    return ktcOtherSectionHeaderHeight;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return kSectionFooterHeight;
+    return ktcSectionFooterHeight;
 }
 
 #pragma mark - Private Methods
 
 - (void)tc_setup {
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    CGRect frame = CGRectMake(0, 0, kScreenWidth, kTableViewFooterHeight);
+    CGRect frame = CGRectMake(0, 0, ktcScreenWidth, ktcTableViewFooterHeight);
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:frame];
 }
 

@@ -9,9 +9,9 @@
 #import "TCSettingViewController.h"
 #import "TCSettingTableViewCell.h"
 
-static const CGFloat kHeaderMarginBottom = 8.0f;
-static const CGFloat kFooterMarginTop = 8.0f;
-static const CGFloat kHeaderAndFooterFontSize = 14.0f;
+static const CGFloat ktcHeaderMarginBottom = 8.0f;
+static const CGFloat ktcFooterMarginTop = 8.0f;
+static const CGFloat ktcHeaderAndFooterFontSize = 14.0f;
 
 @interface TCSettingViewController () <TCSettingTableViewCellDelegate>
 
@@ -54,10 +54,10 @@ static const CGFloat kHeaderAndFooterFontSize = 14.0f;
 #pragma mark - UITableViewDelegate
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TCSettingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kReuseIdentifier];
+    TCSettingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ktcReuseIdentifier];
     if (!cell) {
         cell = [[TCSettingTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                             reuseIdentifier:kReuseIdentifier];
+                                             reuseIdentifier:ktcReuseIdentifier];
         cell.delegate = self;
         cell.tableView = tableView;
     }
@@ -121,38 +121,38 @@ static const CGFloat kHeaderAndFooterFontSize = 14.0f;
         headerLabel.textAlignment = cellModel.headerAlignment;
         headerLabel.text = headerText;
         headerLabel.numberOfLines = 0;
-        headerLabel.font = [UIFont systemFontOfSize:kHeaderAndFooterFontSize];
+        headerLabel.font = [UIFont systemFontOfSize:ktcHeaderAndFooterFontSize];
         headerLabel.textColor = [UIColor grayColor];
-        CGSize constraintSize = CGSizeMake(kScreenWidth - kSectionHeaderAndFooterMarginLeft  * 2, CGFLOAT_MAX);
-        CGSize size = [self boundingSizeWithFont:[UIFont systemFontOfSize:kHeaderAndFooterFontSize]
+        CGSize constraintSize = CGSizeMake(ktcScreenWidth - ktcSectionHeaderAndFooterMarginLeft  * 2, CGFLOAT_MAX);
+        CGSize size = [self boundingSizeWithFont:[UIFont systemFontOfSize:ktcHeaderAndFooterFontSize]
                                        forString:headerText
                                   constraintSize:constraintSize];
         if (section == 0) {
             if (cellModel.footerAlignment == NSTextAlignmentCenter) {
-                CGFloat x = (kScreenWidth - size.width) / 2;
-                headerLabel.frame = CGRectMake(x, kFirstSectionHeaderHeight, size.width, size.height);
+                CGFloat x = (ktcScreenWidth - size.width) / 2;
+                headerLabel.frame = CGRectMake(x, ktcFirstSectionHeaderHeight, size.width, size.height);
             } else {
                 headerLabel.frame =
-                CGRectMake(kSectionHeaderAndFooterMarginLeft, kFirstSectionHeaderHeight, size.width, size.height);
+                CGRectMake(ktcSectionHeaderAndFooterMarginLeft, ktcFirstSectionHeaderHeight, size.width, size.height);
             }
         } else {
             if (cellModel.footerAlignment == NSTextAlignmentCenter) {
-                CGFloat x = (kScreenWidth - size.width) / 2;
-                headerLabel.frame = CGRectMake(x, kOtherSectionHeaderHeight, size.width, size.height);
+                CGFloat x = (ktcScreenWidth - size.width) / 2;
+                headerLabel.frame = CGRectMake(x, ktcOtherSectionHeaderHeight, size.width, size.height);
             } else {
                 headerLabel.frame =
-                CGRectMake(kSectionHeaderAndFooterMarginLeft, kOtherSectionHeaderHeight, size.width, size.height);
+                CGRectMake(ktcSectionHeaderAndFooterMarginLeft, ktcOtherSectionHeaderHeight, size.width, size.height);
             }
         }
         UIView *headerView = [[UIView alloc] init];
         [headerView addSubview:headerLabel];
         CGFloat headerViewHeight;
         if (section == 0) {
-            headerViewHeight = size.height + kHeaderMarginBottom + kFirstSectionHeaderHeight;
+            headerViewHeight = size.height + ktcHeaderMarginBottom + ktcFirstSectionHeaderHeight;
         } else {
-            headerViewHeight = size.height + kHeaderMarginBottom + kOtherSectionHeaderHeight;
+            headerViewHeight = size.height + ktcHeaderMarginBottom + ktcOtherSectionHeaderHeight;
         }
-        headerView.frame = CGRectMake(0, 0, kScreenWidth, headerViewHeight);
+        headerView.frame = CGRectMake(0, 0, ktcScreenWidth, headerViewHeight);
         return headerView;
     }
     
@@ -167,27 +167,27 @@ static const CGFloat kHeaderAndFooterFontSize = 14.0f;
         footerLabel.textAlignment = cellModel.footerAlignment;
         footerLabel.text = footerText;
         footerLabel.numberOfLines = 0;
-        footerLabel.font = [UIFont systemFontOfSize:kHeaderAndFooterFontSize];
+        footerLabel.font = [UIFont systemFontOfSize:ktcHeaderAndFooterFontSize];
         footerLabel.textColor = [UIColor grayColor];
-        CGSize constraintSize = CGSizeMake(kScreenWidth - kSectionHeaderAndFooterMarginLeft * 2, CGFLOAT_MAX);
-        CGSize size = [self boundingSizeWithFont:[UIFont systemFontOfSize:kHeaderAndFooterFontSize]
+        CGSize constraintSize = CGSizeMake(ktcScreenWidth - ktcSectionHeaderAndFooterMarginLeft * 2, CGFLOAT_MAX);
+        CGSize size = [self boundingSizeWithFont:[UIFont systemFontOfSize:ktcHeaderAndFooterFontSize]
                                        forString:footerText
                                   constraintSize:constraintSize];
         if (cellModel.footerAlignment == NSTextAlignmentCenter) {
-            CGFloat x = (kScreenWidth - size.width) / 2;
-            footerLabel.frame = CGRectMake(x, kFooterMarginTop, size.width, size.height);
+            CGFloat x = (ktcScreenWidth - size.width) / 2;
+            footerLabel.frame = CGRectMake(x, ktcFooterMarginTop, size.width, size.height);
         } else {
-            footerLabel.frame = CGRectMake(kSectionHeaderAndFooterMarginLeft, kFooterMarginTop, size.width, size.height);
+            footerLabel.frame = CGRectMake(ktcSectionHeaderAndFooterMarginLeft, ktcFooterMarginTop, size.width, size.height);
         }
         UIView *footerView = [[UIView alloc] init];
         [footerView addSubview:footerLabel];
         CGFloat footerViewHeight;
         if (section == 0) {
-            footerViewHeight = size.height + kFooterMarginTop + kSectionFooterHeight;
+            footerViewHeight = size.height + ktcFooterMarginTop + ktcSectionFooterHeight;
         } else {
-            footerViewHeight = size.height + kFooterMarginTop + kSectionFooterHeight;
+            footerViewHeight = size.height + ktcFooterMarginTop + ktcSectionFooterHeight;
         }
-        footerView.frame = CGRectMake(0, 0, kScreenWidth, footerViewHeight);
+        footerView.frame = CGRectMake(0, 0, ktcScreenWidth, footerViewHeight);
         return footerView;
     }
     return nil;
@@ -196,14 +196,14 @@ static const CGFloat kHeaderAndFooterFontSize = 14.0f;
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     TCSettingCellModel *cellModel = [self.settingDatasource[section] firstObject];
     if (cellModel &&  cellModel.headerText) {
-        CGSize constraintSize = CGSizeMake(kScreenWidth - kSectionHeaderAndFooterMarginLeft * 2, CGFLOAT_MAX);
-        CGSize size = [self boundingSizeWithFont:[UIFont systemFontOfSize:kHeaderAndFooterFontSize]
+        CGSize constraintSize = CGSizeMake(ktcScreenWidth - ktcSectionHeaderAndFooterMarginLeft * 2, CGFLOAT_MAX);
+        CGSize size = [self boundingSizeWithFont:[UIFont systemFontOfSize:ktcHeaderAndFooterFontSize]
                                        forString: cellModel.headerText
                                   constraintSize:constraintSize];
         if (section == 0) {
-            return size.height + kHeaderMarginBottom + kFirstSectionHeaderHeight;
+            return size.height + ktcHeaderMarginBottom + ktcFirstSectionHeaderHeight;
         } else {
-            return size.height + kHeaderMarginBottom + kOtherSectionHeaderHeight;
+            return size.height + ktcHeaderMarginBottom + ktcOtherSectionHeaderHeight;
         }
     } else {
         return [super tableView:tableView heightForHeaderInSection:section];
@@ -213,11 +213,11 @@ static const CGFloat kHeaderAndFooterFontSize = 14.0f;
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     TCSettingCellModel *cellModel = [self.settingDatasource[section] lastObject];
     if (cellModel && cellModel.footerText) {
-        CGSize constraintSize = CGSizeMake(kScreenWidth - kSectionHeaderAndFooterMarginLeft * 2, CGFLOAT_MAX);
-        CGSize size = [self boundingSizeWithFont:[UIFont systemFontOfSize:kHeaderAndFooterFontSize]
+        CGSize constraintSize = CGSizeMake(ktcScreenWidth - ktcSectionHeaderAndFooterMarginLeft * 2, CGFLOAT_MAX);
+        CGSize size = [self boundingSizeWithFont:[UIFont systemFontOfSize:ktcHeaderAndFooterFontSize]
                                        forString:cellModel.footerText
                                   constraintSize:constraintSize];
-        return size.height + kFooterMarginTop + kSectionFooterHeight;
+        return size.height + ktcFooterMarginTop + ktcSectionFooterHeight;
     }
     return [super tableView:tableView heightForFooterInSection:section];
 }

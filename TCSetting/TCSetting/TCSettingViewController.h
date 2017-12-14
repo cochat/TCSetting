@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TCSettingLikeViewController.h"
 
-static NSString * const kReuseIdentifier = @"Cell";
+static NSString * const ktcReuseIdentifier = @"Cell";
 
 @interface TCSettingViewController : TCSettingLikeViewController
 

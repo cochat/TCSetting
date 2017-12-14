@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TCSettingCellModel.h"
 
-static const CGFloat kSectionHeaderAndFooterMarginLeft = 15.0f;
+static const CGFloat ktcSectionHeaderAndFooterMarginLeft = 15.0f;
 
 @protocol TCSettingTableViewCellDelegate;
 @interface TCSettingTableViewCell : UITableViewCell
