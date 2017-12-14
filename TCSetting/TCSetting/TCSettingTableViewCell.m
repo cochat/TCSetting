@@ -75,8 +75,8 @@ static const CGFloat kTitleMarginRight2 = 10.0f;
                 make.size.mas_equalTo(weakself.detailLabel.frame.size);
                 make.right.mas_equalTo(0.0f);
                 make.centerY.equalTo(weakself.contentView);
-                CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-                make.width.mas_equalTo(screenWidth / 2);
+                CGFloat tcScreenWidth = [UIScreen mainScreen].bounds.size.width;
+                make.width.mas_equalTo(tcScreenWidth / 2);
             }];
         }
     } else {
@@ -156,19 +156,19 @@ static const CGFloat kTitleMarginRight2 = 10.0f;
             weakself.titleLabel.textAlignment = NSTextAlignmentLeft;
         }
         make.centerY.equalTo(weakself.contentView);
-        CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+        CGFloat tcScreenWidth = [UIScreen mainScreen].bounds.size.width;
         CGFloat maxWidth = 0.0f;
         CGFloat detailViewWidth = 0.0f;
-        if (_detailView) {
-            detailViewWidth = _detailView.frame.size.width;
+        if (weakself.detailView) {
+            detailViewWidth = weakself.detailView.frame.size.width;
         }
         if (self.cellModel.accessoryType == TCCellAccessorySwitch) {
             detailViewWidth = self.switchView.frame.size.width;
         }
         if (self.cellModel.accessoryType == TCCellAccessoryDisclosureIndicator) {
-            maxWidth = screenWidth - kTitleMarginLeft - kTitleMarginRight - detailViewWidth;
+            maxWidth = tcScreenWidth - kTitleMarginLeft - kTitleMarginRight - detailViewWidth;
         } else {
-            maxWidth = screenWidth - kTitleMarginLeft - kTitleMarginRight2 - detailViewWidth;
+            maxWidth = tcScreenWidth - kTitleMarginLeft - kTitleMarginRight2 - detailViewWidth;
         }
         make.width.mas_equalTo(maxWidth);
     }];
