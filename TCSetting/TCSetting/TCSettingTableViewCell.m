@@ -7,8 +7,17 @@
 //
 
 #import "TCSettingTableViewCell.h"
+#if __has_include(<Masonry/Masonry.h>)
+#import <Masonry/Masonry.h>
+#else
 #import "Masonry.h"
+#endif
+
+#if __has_include(<TCTools/TCSizeManager.h>)
+#import<TCTools/TCSizeManager.h>
+#else
 #import "TCSizeManager.h"
+#endif
 
 static const CGFloat kTitleMarginLeft = 15.0f;
 static const CGFloat kTitleMarginRight = 30.0f;

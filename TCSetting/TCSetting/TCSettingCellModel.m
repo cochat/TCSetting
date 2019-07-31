@@ -7,7 +7,11 @@
 //
 
 #import "TCSettingCellModel.h"
+#if __has_include(<TCTools/TCSizeManager.h>)
+#import<TCTools/TCSizeManager.h>
+#else
 #import "TCSizeManager.h"
+#endif
 
 @implementation TCSettingCellModel
 

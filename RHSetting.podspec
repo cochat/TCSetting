@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RHSetting"
-  s.version      = "1.2.1.8"
+  s.version      = "1.2.1.9"
   
   s.summary      = "用于App的设置页面，简单、实用、美观"
   s.homepage     = "https://github.com/cochat/TCSetting"
@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/cochat/TCSetting.git", :tag => "#{s.version}" }
   s.source_files  = "TCSetting/TCSetting/*.{h,m}"
   s.requires_arc = true
-  s.dependency "Masonry", "~> 1.1.0"
+  s.dependency "Masonry", "~> 1.0.2"
 	s.dependency "TCTools", "~> 0.1.16"
 end
