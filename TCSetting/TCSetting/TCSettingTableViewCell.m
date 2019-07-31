@@ -49,7 +49,7 @@ static const CGFloat kTitleMarginRight2 = 10.0f;
         if (self.cellModel.accessoryType == TCCellAccessoryDisclosureIndicator) {
             self.detailView.hidden = NO;
             [self.detailView mas_updateConstraints:^(MASConstraintMaker *make) {
-                make.size.mas_equalTo(self.detailView.frame.size);
+                make.size.mas_equalTo(_detailView.frame.size);
                 make.right.mas_equalTo(0.0f);
                 make.centerY.equalTo(self.contentView);
             }];
@@ -159,8 +159,8 @@ static const CGFloat kTitleMarginRight2 = 10.0f;
         CGFloat tcScreenWidth = [UIScreen mainScreen].bounds.size.width;
         CGFloat maxWidth = 0.0f;
         CGFloat detailViewWidth = 0.0f;
-        if (weakself.detailView) {
-            detailViewWidth = weakself.detailView.frame.size.width;
+        if (_detailView) {
+            detailViewWidth = _detailView.frame.size.width;
         }
         if (self.cellModel.accessoryType == TCCellAccessorySwitch) {
             detailViewWidth = self.switchView.frame.size.width;
@@ -225,5 +225,6 @@ static const CGFloat kTitleMarginRight2 = 10.0f;
     _cellModel = cellModel;
     [self setup];
 }
+
 
 @end

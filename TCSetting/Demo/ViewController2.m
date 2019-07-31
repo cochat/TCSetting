@@ -75,4 +75,8 @@
     NSLog(@"点击%ld-%ld", indexPath.section, indexPath.row);
 }
 
+-(void)dealloc {
+    NSLog(@"ViewController2");
+}
+
 @end

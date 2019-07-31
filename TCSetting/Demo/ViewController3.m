@@ -95,4 +95,8 @@
     return datasource;
 }
 
+-(void)dealloc {
+    NSLog(@"ViewController3");
+}
+
 @end

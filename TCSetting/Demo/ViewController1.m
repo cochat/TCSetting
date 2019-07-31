@@ -83,4 +83,8 @@
     return datasource;
 }
 
+-(void)dealloc {
+    NSLog(@"ViewController1");
+}
+
 @end

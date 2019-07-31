@@ -78,4 +78,8 @@
     return datasource;
 }
 
+-(void)dealloc {
+    NSLog(@"ViewController4");
+}
+
 @end

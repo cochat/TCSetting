@@ -85,4 +85,8 @@
     }
 }
 
+-(void)dealloc {
+    NSLog(@"ViewController5");
+}
+
 @end
